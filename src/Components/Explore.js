@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import {Link, navigate} from '@reach/router';
 
 class Explore extends Component{
     render(){
         return(
-            <h1>This will be the "World" view</h1>
+            <div>
+                <h1>This will be the "World" view</h1>
+                <Link to="/">Fight Another</Link>
+            </div>
         )
     }
 }

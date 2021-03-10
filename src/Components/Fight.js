@@ -3,9 +3,10 @@ import Player from  './Player.js'
 import Enemy from  './Enemy.js'
 import {Link, navigate} from '@reach/router';
 
+
 var enemyName = "Enemy";
 var playerName = "Billy";
-var enemyHealth = 50;
+var enemyHealth = Math.floor(Math.random()*51)+50;
 var playerHealth = 100;
 var playerdmg = 10;
 var enemydmg = 5;
