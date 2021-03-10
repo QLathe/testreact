@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Player from  './Player.js'
 import Enemy from  './Enemy.js'
+import {Link, navigate} from '@reach/router';
 
 var enemyName = "Enemy";
 var playerName = "Billy";
@@ -8,7 +9,7 @@ var enemyHealth = 50;
 var playerHealth = 100;
 var playerdmg = 10;
 var enemydmg = 5;
-class Background extends Component{
+class Fight extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -17,7 +18,14 @@ class Background extends Component{
         };
     }
     render(){
-        console.log(this.props.children[0])
+        if(this.state.eHealth <= 0){
+            return (
+                <div>
+                    <h1>Victory</h1>
+                    <button onClick={this.Continue}>Continue</button>
+                </div>
+            )
+        }
         return (
             <div>
                 <Enemy firstName={enemyName} health={this.state.eHealth} dmg = {5}/>
@@ -32,9 +40,12 @@ class Background extends Component{
         this.render()
     }
     Attack = () => {
-        this.setState({ eHealth: this.state.eHealth - playerdmg})
-        this.setState({ pHealth: this.state.pHealth - enemydmg})
+        this.setState({ eHealth: this.state.eHealth - playerdmg});
+        this.setState({ pHealth: this.state.pHealth - enemydmg});
+    }
+    Continue = () => {
+        navigate('/route-two')
     }
 }
 
-export default Background;
+export default Fight;

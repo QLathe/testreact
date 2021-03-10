@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Enemy from  './Enemy.js';
 
 class Player extends Component{
     render(){

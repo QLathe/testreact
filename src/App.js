@@ -1,18 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {Router, navigate} from '@reach/router'
 import Player from  './Components/Player.js'
 import Enemy from  './Components/Enemy.js'
-import Background from './Components/Background';
+import Fight from './Components/Fight.js';
+import Alt from './Components/Alt.js';
 
 function App() {
-  return (
-    <div className="App">
-      <Background>
-        <Enemy firstName={"Enemy"} health={50} dmg = {5}/>
-        <Player firstName={"Billy"} health={100} dmg = {10}/>
-      </Background>
+    return (
+      <div className="App">
+        <Router>
+          <Fight path="/"/>
+          <Alt path="/route-two"/>
+        </Router>
     </div>
   );
 }
+
 
 export default App;
