@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Enemy from  './Enemy.js';
 
-class Player extends Component{
+class Enemy extends Component{
     render(){
         return (
             <div>
@@ -11,4 +10,5 @@ class Player extends Component{
         )
     }
 }
-export default Player
+
+export default Enemy
