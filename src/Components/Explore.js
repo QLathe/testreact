@@ -6,7 +6,7 @@ class Explore extends Component{
         return(
             <div>
                 <h1>This will be the "World" view</h1>
-                <Link to="/">Fight Another</Link>
+                <Link to="/fight">Fight Another</Link>
             </div>
         )
     }
